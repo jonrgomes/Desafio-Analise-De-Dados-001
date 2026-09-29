@@ -18,12 +18,12 @@ for venda in vendas:
             categorias.append(produto["categoria"])
 print(categorias)
 
-"""
-1 - Criar um variavel cidade que recebe uma lista com as cidades unicas:
-2 - Percorrer vendas:
-3 - para cada venda percorrer a o atributo endereço de entrega:
-4 - para endereço de entrega acessar a cidade.
-"""
+# """
+# 1 - Criar um variavel cidade que recebe uma lista com as cidades unicas:
+# 2 - Percorrer vendas:
+# 3 - para cada venda percorrer a o atributo endereço de entrega:
+# 4 - para endereço de entrega acessar a cidade.
+# """
 cidades = []
 for venda in vendas:
     if venda["endereco_entrega"]["cidade"] not in cidades:
@@ -35,6 +35,18 @@ for venda in vendas:
     if venda["status"] not in status_venda:
         status_venda.append(venda["status"])
 print(status_venda)
+
+contagem_vendas = {}
+for venda in vendas:
+    pagamento = venda["pagamento"]["metodo"]
+    if pagamento in contagem_vendas:
+        contagem_vendas[pagamento] +=1 
+    else:
+        contagem_vendas[pagamento] = 1
+        
+        print(contagem_vendas)
+    
+    
 
 
 
