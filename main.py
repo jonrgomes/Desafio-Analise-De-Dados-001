@@ -44,7 +44,7 @@ for venda in vendas:
     else:
         contagem_vendas[pagamento] = 1
         
-        print(contagem_vendas)
+print(contagem_vendas)
     
     
 
