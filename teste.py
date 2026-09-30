@@ -12,3 +12,27 @@ for venda in vendas: # percorre lista vendas com a variavel venda, venda recebe 
             
 print(categorias_unicas) # imprime a lista criada e atribuida a variavel categorias_unicas
  
+cidades_unicas = []
+for venda in vendas:
+    if venda["endereco_entrega"]["cidade"] not in cidades_unicas:
+            cidades_unicas.append(venda["endereco_entrega"]["cidade"])
+print(cidades_unicas)
+
+status_venda = []
+for venda in vendas: 
+    if venda["status"] not in status_venda:
+        status_venda.append(venda["status"])
+print(status_venda)
+
+contagem_vendas = {}
+for venda in vendas: 
+   pagamento = venda["pagamento"]["metodo"]
+   if pagamento in contagem_vendas:
+        contagem_vendas[pagamento] +=1
+   else:
+        contagem_vendas[pagamento] = 1
+print(contagem_vendas)
+       
+            
+        
+        
