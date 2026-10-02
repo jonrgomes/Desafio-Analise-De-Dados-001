@@ -12,37 +12,27 @@ with open("base_de_dados.json", "r",encoding="utf-8") as file: # encoding="utf-8
             
 # print(categorias_unicas) # imprime a lista criada e atribuida a variavel categorias_unicas
  
-# cidades_unicas = []
-# for venda in vendas:
-#     if venda["endereco_entrega"]["cidade"] not in cidades_unicas:
-#             cidades_unicas.append(venda["endereco_entrega"]["cidade"])
-# print(cidades_unicas)
+cidades_unicas = []
+for venda in vendas:
+    if venda["endereco_entrega"]["cidade"] not in cidades_unicas:
+            cidades_unicas.append(venda["endereco_entrega"]["cidade"])
+print(cidades_unicas)
 
-# status_venda = []
-# for venda in vendas: 
-#     if venda["status"] not in status_venda:
-#         status_venda.append(venda["status"])
-# print(status_venda)
+status_venda = []
+for venda in vendas: 
+    if venda["status"] not in status_venda:
+        status_venda.append(venda["status"])
+print(status_venda)
 
-# contagem_vendas = {}
-# for venda in vendas: 
-#    pagamento = venda["pagamento"]["metodo"]
-#    if pagamento in contagem_vendas:
-#         contagem_vendas[pagamento] +=1
-#    else:
-#         contagem_vendas[pagamento] = 1
-# print(contagem_vendas)
+contagem_vendas = {}
+for venda in vendas: 
+   pagamento = venda["pagamento"]["metodo"]
+   if pagamento in contagem_vendas:
+        contagem_vendas[pagamento] +=1
+   else:
+        contagem_vendas[pagamento] = 1
+print(contagem_vendas)
        
             
- # Nível 2
 
-valor_total = {}
-qtd_de_itens = {}
-qtd_de_pedidos = {}
-for venda in vendas:
-    if venda["status"] == "CANCELADO";
-        continue
-    valor_total += venda["preco_unitario"]
-    itens_totais += venda["quantidade"]        
-    pedidos_validos += 1
-    print()
+   
