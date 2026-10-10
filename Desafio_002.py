@@ -1,11 +1,13 @@
-# desafio 1
-# nomes = ["joAo SIILVA", "mARIA souza", "carlos Eduardo"]
+# Nivel Fácil
 
-# nomes_corrigidos = []
-# for lista in nomes: 
-#     nomes_corrigidos = lista.title()
-#     nomes_corrigidos = nomes_corrigidos.replace("Joao Siilva", "João Silva")
-#     print(nomes_corrigidos)
+# Desafio 1
+nomes = ["joAo SIILVA", "mARIA souza", "carlos Eduardo"]
+
+nomes_corrigidos = []
+for lista in nomes: 
+    nomes_corrigidos = lista.title()
+    nomes_corrigidos = nomes_corrigidos.replace("Joao Siilva", "João Silva")
+    print(nomes_corrigidos)
 
 # Desafio 2
 gastos_mes = [45.50, 120.00, 15.00, 800.00, 50.00, 250.00]
@@ -18,4 +20,5 @@ for valor in gastos_mes:
         despesa_alta.append(valor)
 print(f"Despesa alta: {despesa_alta}")
 print(f"Despesa baixa: {despesa_baixa}")
-    
+
+# Nível Médio: 
