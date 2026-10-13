@@ -28,6 +28,11 @@ lista_telefonica = []
 celulares = ["11987654321", "987654321", "1198765432100", "21912345678"]
 for digitos in celulares:
     if len(digitos) == 11:
-        lista_telefonica.append(digitos)
+        ddd =  digitos[0:2]
+        parte1 = digitos[2:7]
+        parte2 = digitos[7:11]
+        numero_formatado = f"({ddd}) {parte1}-{parte2}"
+        lista_telefonica.append(numero_formatado)
+        
 print(lista_telefonica)
    
