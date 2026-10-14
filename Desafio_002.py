@@ -45,7 +45,7 @@ carrinho = [{"item": "Camisa", "qtd": 2, "preco": 80.0},
 valor_total = 0
 for valor in carrinho:
     total = valor["qtd"] * valor["preco"]
-    if total > 300.00:
-        valor_desconto = (total * 10)/100
-    else: 
-        valor_desconto = 0
+    
+    print(total)
+
+   
