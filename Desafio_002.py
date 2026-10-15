@@ -38,17 +38,38 @@
 
 # Desafio 4
 
-carrinho = [{"item": "Camisa", "qtd": 2, "preco": 80.0}, 
-            {"item": "Calça", "qtd": 1, "preco": 150.0}, 
-            {"item": "Meia", "qtd": 3, "preco": 15.0}
-]
-valor_total = 0
-for valor in carrinho:
-    total = valor["qtd"] * valor["preco"]
-    valor_total = valor_total + total
-    if valor_total > 300:
-        valor_total = valor_total - (valor_total * 0.1)
-print(f"Sua compra total é de R${valor_total:.2f}")
+# carrinho = [{"item": "Camisa", "qtd": 2, "preco": 80.0}, 
+#             {"item": "Calça", "qtd": 1, "preco": 150.0}, 
+#             {"item": "Meia", "qtd": 3, "preco": 15.0}
+# ]
+# valor_total = 0
+# for valor in carrinho:
+#     total = valor["qtd"] * valor["preco"]
+#     valor_total = valor_total + total
+#     if valor_total > 300:
+#         valor_total = valor_total - (valor_total * 0.1)
+# print(f"Sua compra total é de R${valor_total:.2f}")
     
+# Nível 3 
 
-   
+# Desafio 5
+
+vendas_log = ["Teclado:2:150.00", "Mouse:5:80.00", "Teclado:1:150.00", "Monitor:1:1200.00", "Mouse:2:80.00"]
+
+relatorio_agrupado = {}
+for venda in vendas_log:
+    produto, quantidade_str, valor_str = venda.split(":")
+    quantidade = int(quantidade_str)
+    valor_unitario = float(valor_str)
+    faturamento = quantidade * valor_unitario
+    if produto in relatorio_agrupado:
+        relatorio_agrupado[produto]["quantidade_total"] += quantidade
+        relatorio_agrupado[produto]["faturamento_total"] += faturamento
+    else:
+        relatorio_agrupado[produto] = {
+            "quantidade_total": quantidade,
+            "faturamento_total": faturamento
+        }
+print(relatorio_agrupado)
+    
+    
