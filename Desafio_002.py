@@ -43,11 +43,18 @@ carrinho = [{"item": "Camisa", "qtd": 2, "preco": 80.0},
             {"item": "Meia", "qtd": 3, "preco": 15.0}
 ]
 valor_total = 0
-for valor in carrinho:
-    total = valor["qtd"] * valor["preco"]
-    valor_total = valor_total + total
-    if valor_total > 300:
-        valor_total = valor_total - (valor_total * 0.1)
+valor_total = sum(item["preco"] * item["qtd"] for item in carrinho)
+# for valor in carrinho:
+#     total = valor["qtd"] * valor["preco"]
+#     valor_total = total + valor_total
+print(valor_total)
+
+if valor_total > 300:
+    valor_total = valor_total - (valor_total * 0.1)
+print(valor_total)
+    
+if valor_total > 300:
+    valor_total = valor_total - (valor_total * 0.1)
 print(f"Sua compra total é de R${valor_total:.2f}")
     
 # Nível 3 
